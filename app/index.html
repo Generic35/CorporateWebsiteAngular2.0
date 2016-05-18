@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home</title>
+    
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    
+    <script src="lib/es6-shim.js"></script>
+    <script src="lib/systemJs/system-polyfills.js"></script>
+    <script src="lib/shims_for_IE.js"></script>
+
+    <!-- Angular polyfill required everywhere -->
+    <script src="lib/angular/angular2-polyfills.js"></script>
+
+    <script src="lib/systemJs/system.js"></script>
+    <script src="lib/typescript.js"></script>
+    <script src="lib/Rx.js"></script>
+    <script src="lib/angular/angular2.dev.js"></script>
+    <script src="lib/angular/router.dev.js"></script>
+    <script src="lib/angular/http.dev.js"></script>
+    <script>
+        System.config({
+            transpiler: 'typescript', 
+            typescriptOptions: { emitDecoratorMetadata: true }, 
+            packages: { 
+                'js': {defaultExtension: 'ts'} 
+            } 
+        });
+        System.import('js/main')
+            .then(null, console.error.bind(console));
+    </script>
+</head><!--/head-->
+<body class="homepage">
+
+<app-component></app-component>
+
+</body>
+</html>

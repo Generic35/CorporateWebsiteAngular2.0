@@ -1,0 +1,52 @@
+<div class="team">
+    <div class="center wow fadeInDown">
+        <h2>Team of Corlate</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+    </div>
+
+    <div *ngFor="#teamMemberProfile of teamMemberProfiles; #i = index; #odd = odd; #first = first" >
+        <div [ngClass]="{'row': odd, 'clearfix': odd}">
+            <div [ngClass]="{'col-md-offset-2': !first}" class="col-md-4 col-sm-6"> 
+                <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img class="media-object" src="{{teamMemberProfile.imageUrl}}" alt=""></a>
+                        </div>
+                        <div class="media-body">
+                            <h4>{{teamMemberProfile.name}}</h4>
+                            <h5>{{teamMemberProfile.role}}</h5>
+                            <ul class="tag clearfix">
+                                <li *ngFor="#skill of teamMemberProfile.skills" class="btn"><a href="#">{{skill.name}}</a></li>
+                            </ul>
+                            
+                            <ul class="social_icons">
+                                <li><a [href]="teamMemberProfile.facebookProfileUrl"><i class="fa fa-facebook"></i></a></li>
+                                <li><a [href]="teamMemberProfile.twitterProfileUrl"><i class="fa fa-twitter"></i></a></li> 
+                                <li><a [href]="teamMemberProfile.googlePlusProfileUrl"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!--/.media -->
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                </div>
+            </div><!--/.col-lg-4 -->
+        					
+        </div> <!--/.row -->
+        <div *ngIf="(i % 4) == 1" class="row team-bar">
+            <div class="first-one-arrow hidden-xs">
+                <hr>
+            </div>
+            <div class="first-arrow hidden-xs">
+                <hr> <i class="fa fa-angle-up"></i>
+            </div>
+            <div class="second-arrow hidden-xs">
+                <hr> <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="third-arrow hidden-xs">
+                <hr> <i class="fa fa-angle-up"></i>
+            </div>
+            <div class="fourth-arrow hidden-xs">
+                <hr> <i class="fa fa-angle-down"></i>
+            </div>
+        </div> <!--skill_border-->
+    </div>       
+</div><!--section-->

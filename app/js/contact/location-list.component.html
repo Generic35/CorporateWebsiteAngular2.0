@@ -1,0 +1,18 @@
+<ul class="row">
+    <li class="col-sm-6" *ngFor="#location of locations; #odd=odd; #even=even" >
+        <address *ngIf="even">
+            <h5>{{location.title}}</h5>
+            <p>{{location.street}}<br>
+            {{location.city}}, {{location.state}} {{location.zip}}</p>
+            <p>Phone:{{location.phone}} <br>
+            Email Address:{{location.email}}</p>
+        </address>
+        <address *ngIf="odd">
+            <h5>{{location.title}}</h5>
+            <p>{{location.street}}<br>
+            {{location.city}}, {{location.state}} {{location.zip}}</p>
+            <p>Phone:{{location.phone}} <br>
+            Email Address:{{location.email}}</p>
+        </address>
+    </li>
+</ul>
